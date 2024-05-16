@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicoWaveApplication {
+public class MicroWaveApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicoWaveApplication.class, args);
+		SpringApplication.run(MicroWaveApplication.class, args);
 	}
 
 }
