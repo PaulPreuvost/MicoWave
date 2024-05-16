@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>index</title>
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href = "@{/css/index.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Home Page</h1>
+    <div class="header">
+        <div class="log_button"><a th:href="@{/http://localhost:8080/login}"th:text="LogIn"></a></div>
+        <div class="log_button"><a th:href="@{/http://localhost:8080/authenticate}"th:text="Register"></a></div>
+    </div>
+    <div class="presentation-text">
+        <p>Réservez votre horaire, choisissez votre GABIN’Machines</p>
+    </div>
+    <div class="div_group">
+        <div class="div_button"><a th:href="@{/microwave}" th:text="Micro-Wave"></a></div>
+        <div class="div_button"><a th:href="@{/fridge}" th:text="Fridge"></a></div>
+        <div class="div_button"><a th:href="@{/coffee}" th:text="Coffee"></a></div>
+    </div>
+</div>
+</body>
+</html>
