@@ -1,0 +1,47 @@
+body{
+    color: black;
+    text-decoration:none
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.log_button{
+    align-content: center;
+    font-size: small;
+    margin-inside: 20px;
+    background-color: slategray;
+    height: 20px;
+    width: 70px;
+}
+
+.presentation-text{
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.div_group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.div_button{
+    display: block;
+    font-size: x-large;
+    margin-top: 40px;
+    margin: 20px;
+    background-color: slategray;
+    padding: 80px;
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+}
