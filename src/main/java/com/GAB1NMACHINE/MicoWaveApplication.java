@@ -1,4 +1,4 @@
-package com.GAB1NMACHINE.MicoWave;
+package com.GAB1NMACHINE;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
