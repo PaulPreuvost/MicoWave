@@ -1,4 +1,4 @@
-package com.GAB1NMACHINE.MicoWave.Controller;
+package com.gab1nmachine.index;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

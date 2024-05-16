@@ -1,7 +1,6 @@
-package com.GAB1NMACHINE.MicoWave.login;
+package com.gab1nmachine.login;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller

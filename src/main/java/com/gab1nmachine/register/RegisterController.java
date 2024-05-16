@@ -1,4 +1,4 @@
-package com.GAB1NMACHINE.Register.Controller;
+package com.gab1nmachine.register;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

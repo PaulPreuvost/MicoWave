@@ -1,4 +1,4 @@
-package com.GAB1NMACHINE;
+package com.gab1nmachine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
