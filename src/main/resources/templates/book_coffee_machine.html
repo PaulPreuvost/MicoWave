@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/coffee.css" rel="stylesheet">
+    <title>Réserver - Machine à Café</title>
+</head>
+<body>
+    <div class="header">
+        <div class="log_button"><a th:href="@{/login}"th:text="LogIn"></a></div>
+        <div class="log_button"><a th:href="@{/authenticate}"th:text="Register"></a></div>
+    </div>
+    <div class="presentation-text">
+        <p>Réservez votre horaire pour la Machine à Café</p>
+    </div>
+    <div class="calendar-container">
+        <div class="day-column" th:each="day : ${days}">
+        <button th:each="timeSlot : ${timeSlots}"
+        th:text="${timeSlot}"
+        class="time-button"></button>
+        </div>
+    </div>
+</body>
+</html>
