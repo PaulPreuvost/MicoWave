@@ -14,6 +14,15 @@ body{
     margin: 10px;
 }
 
+.log_button{
+    align-content: center;
+    font-size: small;
+    margin-inside: 20px;
+    background-color: slategray;
+    height: 20px;
+    width: 70px;
+}
+
 .presentation-text{
     font-size: xx-large;
     text-align: center;
@@ -22,7 +31,7 @@ body{
 
 .div_group{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -31,7 +40,11 @@ body{
 }
 
 .div_group button {
-     margin: 30px;
+    margin: 40px;
     padding: 30px 50px;
     font-size: 1.5rem;
- }
+}
+.div_group input {
+    padding: 30px 30px;
+    font-size: 1.5rem;
+}

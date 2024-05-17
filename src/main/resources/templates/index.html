@@ -7,18 +7,19 @@
 </head>
 <body>
 <div class="container">
-    <h1>Home Page</h1>
+    <h1>GABIN’Machines</h1>
+    <h2>Home Page</h2>
     <div class="header">
-        <div class="log_button"><a th:href="@{/login}"th:text="LogIn"></a></div>
-        <div class="log_button"><a th:href="@{/authenticate}"th:text="Register"></a></div>
+        <button type="button" onclick="window.location.href='/login'" class="btn btn-primary">Login</button>
+        <button type="button" onclick="window.location.href='/authenticate'" class="btn btn-primary">Register</button>
     </div>
     <div class="presentation-text">
         <p>Réservez votre horaire, choisissez votre GABIN’Machines</p>
     </div>
     <div class="div_group">
-        <div class="div_button"><a th:href="@{/microwave}" th:text="Micro-Wave"></a></div>
-        <div class="div_button"><a th:href="@{/fridge}" th:text="Fridge"></a></div>
-        <div class="div_button"><a th:href="@{/coffee}" th:text="Coffee"></a></div>
+        <button type="button" onclick="window.location.href='/micro-waves'" class="btn btn-primary">Micro-Ondes</button>
+        <button type="button" onclick="window.location.href='/fridge'" class="btn btn-primary">Réfrégirateur</button>
+        <button type="button" onclick="window.location.href='/coffee'" class="btn btn-primary">Machine à café</button>
     </div>
 </div>
 </body>

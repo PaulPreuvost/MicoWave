@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>index</title>
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href = "@{/css/micro-waves.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>GABIN’Machines</h1>
+    <h2>Acceuil</h2>
+    <div class="header">
+        <h1>Micro-ondes</h1>
+    </div>
+    <div class="div_group">
+        <h2>Indiquez le temps nécesssaire</h2>
+        <div class="mb-3">
+            <label for="appt" class="form-label"></label>
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required class="form-control" />
+        </div>
+        <button type="button" onclick="window.location.href='/reserve'" class="btn btn-primary">Réservez</button>
+        <button type="button" onclick="window.location.href='/reservations'" class="btn btn-primary">Voir les <br> réservations</button>
+    </div>
+</div>
+</body>
+</html>
