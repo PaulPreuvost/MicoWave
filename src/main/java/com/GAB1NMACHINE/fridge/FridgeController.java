@@ -1,4 +1,4 @@
-package com.gab1nmachine.fridge;
+package com.GAB1NMACHINE.fridge;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
