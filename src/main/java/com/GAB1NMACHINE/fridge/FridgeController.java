@@ -1,4 +1,4 @@
-package com.GAB1NMACHINE.MicoWave.controller;
+package com.gab1nmachine.fridge;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
