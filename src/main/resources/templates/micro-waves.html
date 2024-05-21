@@ -15,12 +15,18 @@
     <div class="div_group">
         <h2>Indiquez le temps nécesssaire</h2>
         <div class="mb-3">
-            <label for="appt" class="form-label"></label>
-            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required class="form-control" />
-        </div>
-        <button type="button" onclick="window.location.href='/reserve'" class="btn btn-primary">Réservez</button>
-        <button type="button" onclick="window.location.href='/reservations'" class="btn btn-primary">Voir les <br> réservations</button>
-    </div>
-</div>
-</body>
-</html>
+            <div class="time-group">
+                <form action="#" method="post" th:action="@{/reserve}" th:object="${duration}">
+                    <label for="minutes">Minutes</label>
+                    <input th:field="*{minutes}" type="text" id="minutes" name="minutes" required class="form-control"/>
+                    <label for="seconds">Seconds</label>
+                    <input th:field="*{seconds}" type="text" id="seconds" name="seconds" required class="form-control"/>
+                    <button type="submit" onclick="window.location.href='/reserve'" class="btn btn-primary">Réservez</button>
+                 </form>-
+             </div>
+         </div>
+         <button type="button" onclick="window.location.href='/reservations'" class="btn btn-primary">Voir les <br> réservations</button>
+     </div>
+ </div>
+ </body>
+ </html>
