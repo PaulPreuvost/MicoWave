@@ -37,7 +37,7 @@ public class RegisterController{
         try{
             RegisterInputDTO newRegisterInput = new RegisterInputDTO(UUID.randomUUID(), name, surname, email, password, confirmPassword);
             this.registerAPI.postUserInfo(newRegisterInput);
-            target = "redirect:/reserve";
+            target = "redirect:/index";
         }
         catch (FeignException.FeignClientException e){
             log.error(" Erreur lors de la création ", e);
