@@ -16,15 +16,15 @@
         <h2>Indiquez le temps nécesssaire</h2>
         <div class="mb-3">
             <div class="time-group">
-                <form action="#" method="post" th:action="@{/postDuration}" th:object="${duration}">
+                <form action="#" method="post" th:action="@{/reserve}" th:object="${duration}">
                     <label for="minutes">Minutes</label>
-                    <input th:field="${minutes}" type="text" id="minutes" name="minutes" required class="form-control"/>
+                    <input th:field="*{minutes}" type="text" id="minutes" name="minutes" required class="form-control"/>
                     <label for="seconds">Seconds</label>
-                    <input th:field="${seconds}" type="text" id="seconds" name="seconds" required class="form-control"/>
+                    <input th:field="*{seconds}" type="text" id="seconds" name="seconds" required class="form-control"/>
+                    <button type="submit" onclick="window.location.href='/reserve'" class="btn btn-primary">Réservez</button>
                  </form>-
              </div>
          </div>
-         <button type="button" onclick="window.location.href='/reserve'" class="btn btn-primary">Réservez</button>
          <button type="button" onclick="window.location.href='/reservations'" class="btn btn-primary">Voir les <br> réservations</button>
      </div>
  </div>

@@ -5,11 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "search", url = "http://localhost:8080/")
+@FeignClient(value = "search", url = "http://localhost:8081/")
 public interface MicroWaveAPI {
-    @PostMapping("/micro-waves/add")
-    MicroWavesOutputDTO postDuration(MicroWavesInputDTO newMicroWave);
+    @PostMapping("/reserve")
+    MicroWavesOutputDTO postDuration(@RequestBody MicroWavesInputDTO newMicroWave);
 }
 
 
