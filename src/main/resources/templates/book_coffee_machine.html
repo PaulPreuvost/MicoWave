@@ -6,9 +6,20 @@
     <title>Réserver - Machine à Café</title>
 </head>
 <body>
+    <h1>GABIN’Machines</h1>
     <div class="header">
-        <div class="log_button"><a th:href="@{/login}"th:text="LogIn"></a></div>
-        <div class="log_button"><a th:href="@{/authenticate}"th:text="Register"></a></div>
+        <br>
+        <div class="separate">
+            <button class="log_button"  onclick="window.location.href='/index'">Home
+            </button></div>
+        <div class="separate">
+        <button class="log_button" onclick="window.location.href='/micro-waves'">Micro-ondes
+        </button>
+        </div>
+        <div class="separate">
+            <button class="log_button" onclick="window.location.href='/fridge'">Réfrigirateur
+            </button>
+            </div>
     </div>
     <div class="presentation-text">
         <p>Réservez votre horaire pour la Machine à Café</p>

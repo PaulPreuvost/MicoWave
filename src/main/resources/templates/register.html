@@ -12,12 +12,12 @@
                 <h2 class="text-center">Créer un Compte</h2>
                 <form th:action="@{/register}" th:object="${user}" method="post">
                     <div class="form-group">
-                        <label for="lastname">Nom :</label>
-                        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Entrez votre nom"/>
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Entrez votre nom"/>
                     </div>
                     <div class="form-group">
-                        <label for="firstname">Prénom :</label>
-                        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Entrez votre prénom"/>
+                        <label for="surname">Prénom :</label>
+                        <input type="text" id="surname" name="surname" class="form-control" placeholder="Entrez votre prénom"/>
                     </div>
                     <div class="form-group">
                         <label for="email">Email :</label>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Confirmer le mot de passe :</label>
-                        <input type="password" id="passwordcheck" name="password" class="form-control" placeholder="Confirmer le mot de Passe"/>
+                        <input type="password" id="passwordcheck" name="confirmPassword" class="form-control" placeholder="Confirmer le mot de Passe"/>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Créer un Compte</button>
                     <a href="/login" class="btn btn-link">Déjà un compte ?</a>
