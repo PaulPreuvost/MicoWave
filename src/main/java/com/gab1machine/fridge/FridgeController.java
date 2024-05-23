@@ -1,5 +1,6 @@
 package com.gab1machine.fridge;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -18,16 +19,11 @@ public class FridgeController {
     private final FridgeClient fridgeClient;
 
     @PostMapping(value = "/fridge/confirm/{storageId}", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public String confirmReservation(@PathVariable UUID storageId, Model model, @RequestBody MultiValueMap<String, Object> mapp) {
-//        Date date = new Date(Long.parseLong(mapp.getFirst("date").toString()));
-        List<Object> reservations = mapp.get("reservations");
-        // Decode reservations (List<Object> into List<ReservationDto>)
-        List<ReservationConfirmationInputDto> reservationDtos = null;
-        for (Object reservation : reservations) {
-            MultiValueMap<String, Integer> reservationMap = (MultiValueMap<String, Integer>) reservation;
-            ReservationConfirmationInputDto reservationDto = new ReservationConfirmationInputDto(reservationMap.getFirst("index"), reservationMap.getFirst("size"));
-            reservationDtos.add(reservationDto);
-            System.out.println(reservationDto);
+    public String confirmReservation(@PathVariable UUID storageId, Model model, @RequestBody MultiValueMap<String, Object> mapp) throws JsonProcessingException {
+        String reservationsJsonEncoded = (String) mapp.getFirst("reservations");
+        List<ReservationConfirmationInputDto> reservations = ReservationConfirmationInputDto.fromJsonList(reservationsJsonEncoded);
+        for (ReservationConfirmationInputDto reservation : reservations) {
+            System.out.println(reservation.getSize());
         }
 
         return fridgeOverview(storageId, model);
