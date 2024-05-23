@@ -4,9 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 @Getter
 @Setter
 @AllArgsConstructor
 public class MicroWavesOutputDTO {
-    private int time;
+    private long microWaveId;
+    private LocalTime startDate;
+    private LocalTime endDate;
 }
