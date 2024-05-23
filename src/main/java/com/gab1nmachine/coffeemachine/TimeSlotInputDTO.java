@@ -16,9 +16,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TimeSlotInputDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+     private UUID id;
     private Date date;
-    private boolean is_available;
+    private boolean isAvailable;
 }

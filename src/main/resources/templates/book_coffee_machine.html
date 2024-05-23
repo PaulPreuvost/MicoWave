@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link href="/css/coffee.css" rel="stylesheet">
     <title>Réserver - Machine à Café</title>
 </head>
 <body>
-    <h1>GABIN’Machines</h1>
-    <div class="header">
-        <br>
-        <div class="separate">
-            <button class="log_button"  onclick="window.location.href='/index'">Home
-            </button></div>
-        <div class="separate">
+<h1>GABIN’Machines</h1>
+<div class="header">
+    <br>
+    <div class="separate">
+        <button class="log_button" onclick="window.location.href='/index'">Home
+        </button>
+    </div>
+    <div class="separate">
         <button class="log_button" onclick="window.location.href='/micro-waves'">Micro-ondes
         </button>
-        </div>
-        <div class="separate">
-            <button class="log_button" onclick="window.location.href='/fridge'">Réfrigirateur
-            </button>
-            </div>
     </div>
-    <div class="presentation-text">
-        <p>Réservez votre horaire pour la Machine à Café</p>
+    <div class="separate">
+        <button class="log_button" onclick="window.location.href='/fridge'">Réfrigirateur
+        </button>
     </div>
-    <div class="calendar-container">
-        <div class="day-column" th:each="day : ${days}">
-            <button th:each="timeSlot, iterStat : ${timeSlots}"
+</div>
+<div class="presentation-text">
+    <p>Réservez votre horaire pour la Machine à Café</p>
+</div>
+<div class="calendar-container">
+    <div class="day-column" th:each="day : ${days}">
+        <form>
+            <button th:action="@{/coffee}"
+                    th:class="'time-button' + ${timeSlot.isAvailable ? ' red-button' : ''}"
+                    th:each="timeSlot, iterStat : ${timeSlots}"
+                    th:method="put"
                     th:text="${formattedTimeSlots[iterStat.index]}"
-                    class="time-button"></button>
-        </div>
+                    type="submit">
+            </button>
+        </form>
     </div>
+</div>
 </body>
 </html>

@@ -20,5 +20,5 @@ public class TimeSlot {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
     private Date date;
-    private boolean is_available;
+    private boolean isAvailable;
 }
