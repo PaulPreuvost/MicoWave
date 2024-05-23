@@ -26,9 +26,9 @@
     </div>
     <div class="calendar-container">
         <div class="day-column" th:each="day : ${days}">
-        <button th:each="timeSlot : ${timeSlots}"
-        th:text="${timeSlot}"
-        class="time-button"></button>
+            <button th:each="timeSlot, iterStat : ${timeSlots}"
+                    th:text="${formattedTimeSlots[iterStat.index]}"
+                    class="time-button"></button>
         </div>
     </div>
 </body>
